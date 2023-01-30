@@ -13,22 +13,22 @@
 - **Разработка админ‑панели для сайта Эндаумент Фонда УрФУ** (https://endowment.urfu.ru/). Стек: Svelte (SvelteKit) + Node.js + PostgreSQL
 - **Разработка админ‑панели для сайта приёмной кампании Института новых материалов и технологий УрФУ** (https://inmt-priem.urfu.ru/). Стек: Svelte (SvelteKit) + Node.js + PostgreSQL
 
-### Вопрос №2: Выполните практическое задание ниже.
+### Вопрос №2: Напишите на C# библиотеку для поставки внешним клиентам, которая умеет вычислять площадь круга по радиусу и треугольника по трем сторонам.
 
-Напишите на C# библиотеку для поставки внешним клиентам, которая умеет вычислять площадь круга по радиусу и треугольника по трем сторонам. Дополнительно к работоспособности оценим:
+Выполнил следующие условия:
 
-- [x] Юнит-тесты //
-- [x] Легкость добавления других фигур
-- [ ] Вычисление площади фигуры без знания типа фигуры в compile-time //
-- [x] Проверку на то, является ли треугольник прямоугольным //
+- [x] Юнит-тесты // Возник вопрос по поводу тестирования ArgumentException
+- [x] Легкость добавления других фигур // Реализовал с помощью абстрактного класса Figure, от которого наследуются фигуры
+- [ ] Вычисление площади фигуры без знания типа фигуры в compile-time
+- [x] Проверку на то, является ли треугольник прямоугольным // Реализовал с помощью теоремы Пифагора
 
 ### Вопрос: №2: 
 В базе данных MS SQL Server есть продукты и категории. Одному продукту может соответствовать много категорий, в одной категории может быть много продуктов. Напишите SQL запрос для выбора всех пар «Имя продукта – Имя категории». Если у продукта нет категорий, то его имя все равно должно выводиться.
 
 ```
-SELECT p.name AS ProductName, c.name AS CategoryName FROM Products p
-LEFT JOIN ProductsCategories pc on pc.product_id = p.Id
-LEFT JOIN Categories c on pc.category_id = c.Id
+SELECT product.name AS ProductName, category.name AS CategoryName FROM Products product
+LEFT JOIN ProductsCategories productCategory on productCategory.product_id = product.Id
+LEFT JOIN Categories category on productCategory.category_id = category.Id
 ```
 
 ![image](https://user-images.githubusercontent.com/56552046/215501676-ee31c1cb-b2ae-497e-b4d4-1854da565642.png)
