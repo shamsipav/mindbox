@@ -4,6 +4,8 @@ namespace TestLibrary
 {
     public class UnitTest
     {
+        // Хотелось бы узнать, как можно протестировать наличие ArgumentException, пока не нашел корректного ответа
+        
         [Fact]
         public void TestCircleCorrectArea()
         {
