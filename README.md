@@ -31,4 +31,4 @@ LEFT JOIN ProductsCategories pc on pc.product_id = p.Id
 LEFT JOIN Categories c on pc.category_id = c.Id
 ```
 
-![image](https://user-images.githubusercontent.com/56552046/215501476-7c4acc6b-4283-4069-a32d-dc14a75f7ca9.png)
+![image](https://user-images.githubusercontent.com/56552046/215501676-ee31c1cb-b2ae-497e-b4d4-1854da565642.png)
